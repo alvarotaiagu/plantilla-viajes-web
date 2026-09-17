@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SITIO DE DEMOSTRACIÓN — Viajes Arroaz es una agencia FICTICIA.
+  Nombre, dirección, teléfonos, viajes, precios, fechas de salida
+  y opiniones son de muestra y no corresponden a ninguna agencia
+  real. No se inventa ningún número de licencia de agencia de
+  viajes ni se atribuye ningún sello ni premio.
+  Plantilla pensada para reskinear a un cliente real del sector.
+  ============================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Viajes Arroaz · Agencia de viajes en Viveiro</title>
+<meta name="description" content="Agencia de viajes pequeña en Viveiro: seis viajes propios al año y itinerarios a medida, con precio cerrado y teléfono 24 horas. Sitio de demostración: negocio ficticio.">
+<meta name="theme-color" content="#f4efe4">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Viajes Arroaz · Agencia de viajes en Viveiro">
+<meta property="og:description" content="Seis viajes al año, y el resto a medida. Agencia ficticia de demostración.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..700;1,300..600&family=Spectral:ital,wght@0,300..700;1,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Viajes Arroaz",
+  "description": "Agencia de viajes de barrio con seis viajes propios al año e itinerarios a medida. Negocio ficticio de demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa da Xunqueira Vella, 8",
+    "postalCode": "27850",
+    "addressLocality": "Viveiro",
+    "addressRegion": "Lugo",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34 982 00 00 33",
+  "email": "hola@viajesarroaz.example",
+  "priceRange": "690 € – 2.150 €",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "17:00", "closes": "20:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__caja">
+    <svg class="preloader__marca" viewBox="0 0 120 120" role="presentation" focusable="false">
+      <circle class="preloader__aro" cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="3" pathLength="1"></circle>
+      <circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".6"></circle>
+      <path class="preloader__ola" d="M34 62c8-8 16-8 26 0s18 8 26 0" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" pathLength="1"></path>
+    </svg>
+    <span class="preloader__palabra">Arroaz</span>
+  </div>
+</div>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera" id="cabecera">
+  <a class="marca" href="#inicio" aria-label="Viajes Arroaz, inicio">
+    <svg class="marca__icono" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+      <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.2"></circle>
+      <circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"></circle>
+      <path d="M11 21c3-3.4 6-3.4 9 0s6 3.4 9 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path>
+    </svg>
+    <span class="marca__texto">
+      <span class="marca__nombre">Viajes Arroaz</span>
+      <span class="marca__bajada">agencia de viajes · Viveiro</span>
+    </span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="Navegación principal">
+    <ul class="nav__lista">
+      <li><a href="#viajes">Los viajes</a></li>
+      <li><a href="#medida">A medida</a></li>
+      <li><a href="#nohacemos">Lo que no hacemos</a></li>
+      <li><a href="#agencia">La agencia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="boton boton--verde magnetico" href="#contacto">Pedir cita</a>
+  </nav>
+
+  <button class="hamburguesa" id="hamburguesa" type="button" aria-expanded="false" aria-controls="nav">
+    <span class="hamburguesa__caja" aria-hidden="true"><i></i><i></i></span>
+    <span class="hamburguesa__texto">Menú</span>
+  </button>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ 01 · HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__texto">
+      <p class="hero__sobre">Agencia de viajes · Viveiro, Lugo · desde 2008</p>
+      <h1 class="hero__titular" data-reveal>Seis viajes al año, y el resto a medida</h1>
+      <p class="hero__entrada">No somos un buscador. Somos dos personas en un local de la Xunqueira que preparan seis salidas propias al año, acompañan algunas y montan el resto de los viajes uno a uno, hablando.</p>
+      <div class="hero__acciones">
+        <a class="boton boton--verde magnetico" href="#viajes">Ver los seis viajes</a>
+        <a class="boton boton--linea magnetico" href="#medida">Cómo montamos uno a medida</a>
+      </div>
+      <dl class="hero__datos">
+        <div><dt>Viajes propios al año</dt><dd><span class="contador" data-hasta="6">6</span></dd></div>
+        <div><dt>Plazas por salida</dt><dd>10 – 14</dd></div>
+        <div><dt>Propuesta en</dt><dd><span class="contador" data-hasta="72">72</span> h</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero__pagina">
+      <div class="pagina">
+        <p class="pagina__cabecera">Pasaporte · página 14</p>
+        <svg class="sello sello--hero sello--1" viewBox="0 0 120 120" role="img" aria-label="Sello de São Miguel, mayo">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="3"></circle>
+          <circle cx="60" cy="60" r="43" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+          <path d="M18 60h84" stroke="currentColor" stroke-width="1.2"></path>
+          <text x="60" y="46" text-anchor="middle" class="sello__codigo">PDL</text>
+          <text x="60" y="78" text-anchor="middle" class="sello__fecha">14 MAI</text>
+          <text x="60" y="94" text-anchor="middle" class="sello__pie">AÇORES</text>
+        </svg>
+        <svg class="sello sello--hero sello--2" viewBox="0 0 140 90" role="img" aria-label="Sello de Sarria, abril">
+          <rect x="4" y="4" width="132" height="82" rx="6" fill="none" stroke="currentColor" stroke-width="3"></rect>
+          <rect x="12" y="12" width="116" height="66" rx="3" fill="none" stroke="currentColor" stroke-width="1"></rect>
+          <text x="70" y="42" text-anchor="middle" class="sello__codigo">SARRIA</text>
+          <text x="70" y="62" text-anchor="middle" class="sello__fecha">A PIE · 6 DÍAS</text>
+        </svg>
+        <svg class="sello sello--hero sello--3" viewBox="0 0 130 130" role="img" aria-label="Sello de los fiordos, julio">
+          <path d="M65 6 118 36v58L65 124 12 94V36Z" fill="none" stroke="currentColor" stroke-width="3"></path>
+          <path d="M65 16 109 41v48L65 114 21 89V41Z" fill="none" stroke="currentColor" stroke-width="1"></path>
+          <text x="65" y="58" text-anchor="middle" class="sello__codigo">FIORDOS</text>
+          <text x="65" y="78" text-anchor="middle" class="sello__fecha">3 XUL</text>
+          <path d="M34 92c8-6 16-6 24 0s16 6 24 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </div>
+      <p class="hero__pie">Los sellos se estampan al entrar. En el pasaporte de verdad los pone otro.</p>
+    </div>
+  </section>
+
+  <!-- ============ cinta ============ -->
+  <div class="cinta" aria-hidden="true">
+    <div class="cinta__pista" id="cintaPista">
+      <span>precio cerrado por escrito</span><i>✳</i><span>grupos de diez a catorce</span><i>✳</i>
+      <span>teléfono 24 h durante el viaje</span><i>✳</i><span>sin vuelos sueltos</span><i>✳</i>
+      <span>la primera charla no se cobra</span><i>✳</i>
+    </div>
+  </div>
+
+  <!-- ============ 02 · LOS VIAJES (protagonista) ============ -->
+  <section class="viajes seccion" id="viajes">
+    <p class="seccion__indice"><span>01</span> Los viajes</p>
+    <h2 class="titular titular--grande" data-reveal>Seis salidas con sello, una por temporada</h2>
+    <p class="viajes__entrada">Son nuestras: las montamos, las probamos antes y, en cuatro de ellas, viaja alguien de la agencia. Las plazas son pocas porque el viaje cambia mucho si sois treinta.</p>
+
+    <div class="viajes__rejilla">
+      <article class="viaje" style="--giro:-7deg">
+        <svg class="sello" viewBox="0 0 120 120" role="img" aria-label="Sello de São Miguel, Azores">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="3"></circle>
+          <circle cx="60" cy="60" r="43" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+          <path d="M18 60h84" stroke="currentColor" stroke-width="1.2"></path>
+          <text x="60" y="46" text-anchor="middle" class="sello__codigo">PDL</text>
+          <text x="60" y="78" text-anchor="middle" class="sello__fecha">14 MAI</text>
+          <text x="60" y="94" text-anchor="middle" class="sello__pie">AÇORES</text>
+        </svg>
+        <div class="viaje__ficha">
+          <h3>São Miguel, Azores</h3>
+          <p class="viaje__resumen">Ocho días en coche por la isla, con dos noches en el noreste, que es donde nadie va. Caldeiras, lagos y comida de tasca.</p>
+          <dl class="viaje__datos">
+            <div><dt>Días</dt><dd>8</dd></div>
+            <div><dt>Salida</dt><dd>14 de mayo</dd></div>
+            <div><dt>Plazas</dt><dd>12</dd></div>
+            <div><dt>Desde</dt><dd>1.290 €</dd></div>
+          </dl>
+          <p class="viaje__incluye">Incluye vuelo desde Santiago, coche, siete noches, dos cenas y seguro. No incluye el resto de comidas.</p>
+        </div>
+      </article>
+
+      <article class="viaje" style="--giro:5deg">
+        <svg class="sello" viewBox="0 0 140 90" role="img" aria-label="Sello del Camino desde Sarria">
+          <rect x="4" y="4" width="132" height="82" rx="6" fill="none" stroke="currentColor" stroke-width="3"></rect>
+          <rect x="12" y="12" width="116" height="66" rx="3" fill="none" stroke="currentColor" stroke-width="1"></rect>
+          <text x="70" y="42" text-anchor="middle" class="sello__codigo">SARRIA</text>
+          <text x="70" y="62" text-anchor="middle" class="sello__fecha">A PIE · 6 DÍAS</text>
+        </svg>
+        <div class="viaje__ficha">
+          <h3>Camino Francés desde Sarria</h3>
+          <p class="viaje__resumen">Seis días andando hasta Santiago, con la mochila transportada y las etapas cortas de verdad, no de folleto.</p>
+          <dl class="viaje__datos">
+            <div><dt>Días</dt><dd>6</dd></div>
+            <div><dt>Salidas</dt><dd>Abril a octubre</dd></div>
+            <div><dt>Grupo</dt><dd>10</dd></div>
+            <div><dt>Desde</dt><dd>690 €</dd></div>
+          </dl>
+          <p class="viaje__incluye">Incluye cinco noches, desayunos, transporte de mochila y traslado de vuelta. No incluye las cenas.</p>
+        </div>
+      </article>
+
+      <article class="viaje" style="--giro:-4deg">
+        <svg class="sello" viewBox="0 0 130 130" role="img" aria-label="Sello de los fiordos noruegos">
+          <path d="M65 6 118 36v58L65 124 12 94V36Z" fill="none" stroke="currentColor" stroke-width="3"></path>
+          <path d="M65 16 109 41v48L65 114 21 89V41Z" fill="none" stroke="currentColor" stroke-width="1"></path>
+          <text x="65" y="58" text-anchor="middle" class="sello__codigo">FIORDOS</text>
+          <text x="65" y="78" text-anchor="middle" class="sello__fecha">3 XUL</text>
+          <path d="M34 92c8-6 16-6 24 0s16 6 24 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <div class="viaje__ficha">
+          <h3>Fiordos noruegos, en tren y barco</h3>
+          <p class="viaje__resumen">Nueve días sin coger un avión dentro del país: tren de Oslo a Bergen, el Flåm y dos travesías largas en barco.</p>
+          <dl class="viaje__datos">
+            <div><dt>Días</dt><dd>9</dd></div>
+            <div><dt>Salida</dt><dd>3 de julio</dd></div>
+            <div><dt>Plazas</dt><dd>14</dd></div>
+            <div><dt>Desde</dt><dd>2.150 €</dd></div>
+          </dl>
+          <p class="viaje__incluye">Incluye vuelos, todos los trenes y barcos, ocho noches y acompañante de la agencia.</p>
+        </div>
+      </article>
+
+      <article class="viaje" style="--giro:6deg">
+        <svg class="sello" viewBox="0 0 130 100" role="img" aria-label="Sello del valle del Draa, Marruecos">
+          <path d="M6 20 65 6l59 14v60L65 94 6 80Z" fill="none" stroke="currentColor" stroke-width="3"></path>
+          <path d="M16 27 65 16l49 11v46L65 84 16 73Z" fill="none" stroke="currentColor" stroke-width="1"></path>
+          <text x="65" y="46" text-anchor="middle" class="sello__codigo">DRAA</text>
+          <text x="65" y="66" text-anchor="middle" class="sello__fecha">2 OUT</text>
+        </svg>
+        <div class="viaje__ficha">
+          <h3>Valle del Draa, Marruecos</h3>
+          <p class="viaje__resumen">Diez días de Marrakech al sur, con dos noches en casa de familia y una en el desierto. Se viaja en furgoneta, despacio.</p>
+          <dl class="viaje__datos">
+            <div><dt>Días</dt><dd>10</dd></div>
+            <div><dt>Salida</dt><dd>2 de octubre</dd></div>
+            <div><dt>Plazas</dt><dd>12</dd></div>
+            <div><dt>Desde</dt><dd>1.480 €</dd></div>
+          </dl>
+          <p class="viaje__incluye">Incluye vuelos, transporte, nueve noches, guía local y todas las comidas menos cuatro.</p>
+        </div>
+      </article>
+
+      <article class="viaje" style="--giro:-6deg">
+        <svg class="sello" viewBox="0 0 120 120" role="img" aria-label="Sello de las Tierras Altas de Escocia">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="6 5"></circle>
+          <circle cx="60" cy="60" r="41" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+          <text x="60" y="52" text-anchor="middle" class="sello__codigo">HIGH</text>
+          <text x="60" y="70" text-anchor="middle" class="sello__codigo">LANDS</text>
+          <text x="60" y="88" text-anchor="middle" class="sello__fecha">TODO O ANO</text>
+        </svg>
+        <div class="viaje__ficha">
+          <h3>Tierras Altas de Escocia, en coche</h3>
+          <p class="viaje__resumen">Siete días a tu aire con la ruta montada: alojamientos reservados, coche, y un cuaderno con lo que merece la pena y lo que no.</p>
+          <dl class="viaje__datos">
+            <div><dt>Días</dt><dd>7</dd></div>
+            <div><dt>Cuándo</dt><dd>Todo el año</dd></div>
+            <div><dt>Grupo</dt><dd>A medida</dd></div>
+            <div><dt>Desde</dt><dd>1.050 €</dd></div>
+          </dl>
+          <p class="viaje__incluye">Incluye vuelos, coche, seis noches y el cuaderno de ruta. No hay guía ni grupo: vais vosotros.</p>
+        </div>
+      </article>
+
+      <article class="viaje" style="--giro:4deg">
+        <svg class="sello" viewBox="0 0 140 96" role="img" aria-label="Sello de Santo Antão, Cabo Verde">
+          <path d="M8 48 26 8h88l18 40-18 40H26Z" fill="none" stroke="currentColor" stroke-width="3"></path>
+          <path d="M20 48 34 18h72l14 30-14 30H34Z" fill="none" stroke="currentColor" stroke-width="1"></path>
+          <text x="70" y="44" text-anchor="middle" class="sello__codigo">STO ANTÃO</text>
+          <text x="70" y="64" text-anchor="middle" class="sello__fecha">20 NOV</text>
+        </svg>
+        <div class="viaje__ficha">
+          <h3>Santo Antão, Cabo Verde</h3>
+          <p class="viaje__resumen">Nueve días de senderismo por los valles del norte, durmiendo en casas pequeñas y comiendo lo que haya. Hay cuestas de verdad.</p>
+          <dl class="viaje__datos">
+            <div><dt>Días</dt><dd>9</dd></div>
+            <div><dt>Salida</dt><dd>20 de noviembre</dd></div>
+            <div><dt>Plazas</dt><dd>10</dd></div>
+            <div><dt>Desde</dt><dd>1.620 €</dd></div>
+          </dl>
+          <p class="viaje__incluye">Incluye vuelos, ferry, ocho noches, guía local de la isla y media pensión.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="viajes__nota">Precios de muestra para esta demostración, por persona en habitación doble y sin tasas variables. En una agencia real, cada ficha llevaría también las condiciones de cancelación y el seguro contratado.</p>
+  </section>
+
+  <!-- ============ 03 · A MEDIDA ============ -->
+  <section class="medida" id="medida">
+    <div class="seccion">
+      <p class="seccion__indice"><span>02</span> A medida</p>
+      <div class="medida__rejilla">
+        <div>
+          <h2 class="titular" data-reveal>Cuatro pasos y una propuesta en setenta y dos horas</h2>
+          <ol class="pasos">
+            <li>
+              <b>La charla</b>
+              <span>Cuarenta minutos en el local o por teléfono. Queremos saber con quién viajáis, cuánto queréis andar y qué presupuesto hay. No se cobra y no compromete a nada.</span>
+            </li>
+            <li>
+              <b>La propuesta</b>
+              <span>En setenta y dos horas os mandamos dos o tres opciones con el precio cerrado, lo que incluye y lo que no. En papel, para que se pueda comparar.</span>
+            </li>
+            <li>
+              <b>La reserva</b>
+              <span>Se confirma con el 25 % y el resto treinta días antes de salir. Todo lo que se reserva queda a vuestro nombre, no al nuestro.</span>
+            </li>
+            <li>
+              <b>El viaje</b>
+              <span>Os vais con un teléfono que contesta veinticuatro horas, con el horario español. Si algo se tuerce, lo arreglamos desde aquí.</span>
+            </li>
+          </ol>
+        </div>
+        <figure class="medida__foto" data-mascara>
+          <img src="assets/fotos/mapa-1600.jpg" srcset="assets/fotos/mapa-800.jpg 800w, assets/fotos/mapa-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 38vw" width="1600" height="2399" loading="lazy" alt="Mapa antiguo con un cuaderno de cuero, una brújula y una cámara">
+          <figcaption>Foto de archivo: así se prepara una propuesta, más o menos.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · LO QUE NO HACEMOS ============ -->
+  <section class="nohacemos seccion" id="nohacemos">
+    <p class="seccion__indice"><span>03</span> Lo que no hacemos</p>
+    <div class="nohacemos__rejilla">
+      <div>
+        <h2 class="titular" data-reveal>Hay cosas que se hacen mejor sin nosotros</h2>
+        <ul class="nohacemos__lista">
+          <li><b>Vuelos sueltos al mejor precio.</b> Para eso están los buscadores, y lo van a hacer mejor y más barato. Si el viaje es solo un vuelo, no nos llames.</li>
+          <li><b>Cruceros.</b> No los conocemos y no nos gusta vender lo que no conocemos.</li>
+          <li><b>Catorce países en diez días.</b> Lo montamos si insistís, pero primero os vamos a intentar convencer de lo contrario.</li>
+          <li><b>Proveedores que no hemos pisado.</b> Cada hotel y cada guía de estos seis viajes los conoce alguien de la agencia por su nombre.</li>
+          <li><b>Cobrar la primera charla.</b> Ni la segunda. Se cobra cuando hay viaje.</li>
+        </ul>
+      </div>
+      <figure class="nohacemos__foto" data-mascara>
+        <img src="assets/fotos/nubes-1600.jpg" srcset="assets/fotos/nubes-800.jpg 800w, assets/fotos/nubes-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 34vw" width="1600" height="2400" loading="lazy" alt="Vista de las nubes y el ala del avión desde la ventanilla">
+        <figcaption>Foto de archivo.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 05 · LA AGENCIA ============ -->
+  <section class="agencia seccion" id="agencia">
+    <p class="seccion__indice"><span>04</span> La agencia</p>
+    <div class="agencia__rejilla">
+      <div class="agencia__texto">
+        <h2 class="titular" data-reveal>Dos personas, un local y diecisiete años</h2>
+        <p>Abrimos en 2008 en la Xunqueira, al lado del mercado. Somos <strong>Carme Arroaz</strong>, que monta los itinerarios, y <strong>Brais Otero</strong>, que lleva la contratación y acompaña las salidas largas. No hay más plantilla ni falta que hace.</p>
+        <p>Trabajamos sobre todo con gente de la comarca, que vuelve. Eso obliga a no vender humo: aquí te cruzas con tus clientes en la plaza el sábado siguiente.</p>
+
+        <div class="licencia">
+          <h3>Licencia de agencia de viajes</h3>
+          <p>Una agencia real tiene que publicar su número de licencia (en Galicia, el código <em>XG-…</em>), su seguro de responsabilidad civil y su garantía frente a insolvencia. <strong>Esta demostración no inventa ninguno</strong>: al reskinear la plantilla hay que poner los del cliente aquí y en el aviso legal.</p>
+        </div>
+
+        <div class="cuaderno">
+          <h3>Del cuaderno del mostrador</h3>
+          <p class="cuaderno__aviso">Notas de muestra, escritas para esta demostración. No proceden de ninguna plataforma ni de ninguna persona real.</p>
+          <blockquote><p>«Nos cambiaron un vuelo cancelado un domingo a las siete de la mañana. Ni nos enteramos hasta que llegamos al aeropuerto y estaba resuelto.»</p><footer>Familia Ledo · fiordos, julio</footer></blockquote>
+          <blockquote><p>«Nos dijeron que el viaje que queríamos no nos iba a gustar y nos propusieron otro. Tenían razón.»</p><footer>Inés e Manuel · Santo Antão</footer></blockquote>
+        </div>
+      </div>
+
+      <div class="agencia__lado">
+        <figure data-mascara>
+          <img src="assets/fotos/equipaje-1600.jpg" srcset="assets/fotos/equipaje-800.jpg 800w, assets/fotos/equipaje-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 36vw" width="1600" height="2240" loading="lazy" alt="Maletas y mochilas colocadas en el suelo vistas desde arriba">
+          <figcaption>Foto de archivo: el equipaje que cabe, que es menos del que crees.</figcaption>
+        </figure>
+        <figure data-mascara>
+          <img src="assets/fotos/tren-1600.jpg" srcset="assets/fotos/tren-800.jpg 800w, assets/fotos/tren-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 36vw" width="1600" height="1200" loading="lazy" alt="Campo verde visto desde la ventanilla de un tren">
+          <figcaption>Foto de archivo.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · CONTACTO ============ -->
+  <section class="contacto seccion" id="contacto">
+    <p class="seccion__indice"><span>05</span> Contacto</p>
+    <div class="contacto__rejilla">
+      <div class="contacto__texto">
+        <h2 class="titular" data-reveal>Se viene al local, se llama o se escribe</h2>
+        <p>Para una propuesta a medida preferimos la cita: cuarenta minutos sin que suene el teléfono. Se pide por cualquiera de estas vías y no cuesta nada.</p>
+        <ul class="contacto__datos">
+          <li><span>Teléfono</span><a href="tel:+34982000033">982 00 00 33</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/34600000033" rel="noopener">600 00 00 33</a></li>
+          <li><span>Correo</span><a href="mailto:hola@viajesarroaz.example">hola@viajesarroaz.example</a></li>
+          <li><span>Local</span>Rúa da Xunqueira Vella, 8 · 27850 Viveiro (Lugo)</li>
+          <li><span>Horario</span>Lunes a viernes 10:00–14:00 · lunes a jueves 17:00–20:00</li>
+          <li><span>Estado</span><span id="estadoTexto">Comprobando el horario…</span></li>
+        </ul>
+        <p class="contacto__nota">En verano, de julio a septiembre, cerramos por las tardes. El teléfono de emergencias para quien está de viaje funciona igual los 365 días.</p>
+        <figure class="contacto__foto" data-mascara>
+          <img src="assets/fotos/calle-1600.jpg" srcset="assets/fotos/calle-800.jpg 800w, assets/fotos/calle-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="1600" height="2133" loading="lazy" alt="Calle de casco antiguo con fachadas históricas y luz cálida">
+          <figcaption>Foto de archivo.</figcaption>
+        </figure>
+      </div>
+
+      <div class="contacto__lado">
+        <div class="contacto__mapa">
+          <div class="mapa-consent" id="mapaConsent">
+            <svg class="mapa-consent__dibujo" viewBox="0 0 300 170" aria-hidden="true" focusable="false">
+              <path d="M0 122c48-10 66-34 116-34s72 30 118 22" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"></path>
+              <path d="M0 146c52-8 72-20 120-20s72 16 116 8" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".25"></path>
+              <circle cx="150" cy="82" r="30" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".45"></circle>
+              <circle cx="150" cy="82" r="5" fill="currentColor"></circle>
+              <path d="M150 87v26" stroke="currentColor" stroke-width="1.5"></path>
+              <path d="M106 44h36v24h-36zM186 54h44v26h-44z" fill="none" stroke="currentColor" stroke-width="1.3" opacity=".35"></path>
+            </svg>
+            <p>El mapa lo carga Google y pone cookies suyas. Solo aparece si lo pides tú.</p>
+            <button class="boton boton--linea" type="button" id="mapaBoton">Cargar el mapa de Google</button>
+          </div>
+        </div>
+        <figure class="contacto__foto2" data-mascara>
+          <img src="assets/fotos/ciudad-1600.jpg" srcset="assets/fotos/ciudad-800.jpg 800w, assets/fotos/ciudad-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 36vw" width="1600" height="2000" loading="lazy" alt="Calle europea al amanecer con edificios históricos">
+          <figcaption>Foto de archivo.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie" id="pie">
+  <div class="pie__rejilla">
+    <div class="pie__marca">
+      <svg class="marca__icono" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.2"></circle>
+        <path d="M11 21c3-3.4 6-3.4 9 0s6 3.4 9 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path>
+      </svg>
+      <p class="pie__nombre">Viajes Arroaz</p>
+      <p class="pie__lema">Agencia de viajes en Viveiro, desde 2008.</p>
+    </div>
+    <div class="pie__bloque">
+      <h2>Dónde</h2>
+      <p>Rúa da Xunqueira Vella, 8<br>27850 Viveiro · Lugo</p>
+      <p><a href="tel:+34982000033">982 00 00 33</a><br><a href="mailto:hola@viajesarroaz.example">hola@viajesarroaz.example</a></p>
+    </div>
+    <div class="pie__bloque">
+      <h2>Horario</h2>
+      <p>Lunes a viernes 10:00 – 14:00<br>Lunes a jueves 17:00 – 20:00<br>Julio a septiembre, solo mañanas</p>
+    </div>
+    <div class="pie__bloque">
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="aviso-legal.html">Aviso legal</a></li>
+        <li><a href="privacidad.html">Privacidad y cookies</a></li>
+        <li><a href="#inicio">Volver arriba</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="pie__demo"><strong>Sitio de demostración.</strong> Viajes Arroaz es una agencia ficticia; los viajes, los precios, las fechas, las fotografías y las opiniones son de muestra. <strong>No se publica ningún número de licencia de agencia de viajes</strong> porque no se inventa.</p>
+  <p class="pie__creditos">Fotografías de archivo con licencia Pexels, acreditadas en <code>CREDITOS.md</code>. Sellos, logotipo e ilustraciones, dibujados en SVG para esta plantilla.</p>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" hidden role="dialog" aria-labelledby="cookieTitulo" aria-describedby="cookieTexto">
+  <div class="cookie-banner__texto">
+    <h2 id="cookieTitulo">Sobre las cookies</h2>
+    <p id="cookieTexto">Esta web no usa cookies de seguimiento ni analítica. Solo guardamos en tu navegador que ya has visto este aviso. El mapa de Google únicamente se carga si pulsas el botón.</p>
+  </div>
+  <div class="cookie-banner__acciones">
+    <a class="cookie-banner__mas" href="privacidad.html">Más detalle</a>
+    <button class="boton boton--verde" type="button" id="cookieAceptar">Entendido</button>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <span class="cursor__forma"></span>
+  <span class="cursor__texto" id="cursorTexto"></span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
