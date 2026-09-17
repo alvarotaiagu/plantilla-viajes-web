@@ -1,0 +1,14 @@
+{
+  "name": "Viajes Arroaz · agencia de viajes (demostración)",
+  "short_name": "Arroaz",
+  "description": "Plantilla de demostración para agencia de viajes. Negocio ficticio.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4efe4",
+  "theme_color": "#f4efe4",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

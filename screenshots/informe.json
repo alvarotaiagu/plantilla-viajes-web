@@ -1,0 +1,25 @@
+{
+  "errores": [
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED"
+  ],
+  "fallos": [
+    "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js :: net::ERR_FAILED",
+    "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js :: net::ERR_FAILED",
+    "https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js :: net::ERR_FAILED"
+  ],
+  "pruebas": {
+    "estado": "Cerrado ahora · abrimos hoy a las 10:00",
+    "sellosHero": "true:matrix(0.987688, -0.1564 | true:matrix(0.994522, 0.10452 | true:matrix(0.99863, -0.05233",
+    "viajes": "6 fichas · 6 sellos",
+    "selloEstampado": "visible:true · opacidad sello:0.92  →  visible:true · opacidad sello:0.92",
+    "cookiesVisible": true,
+    "cookiesCerrado": true,
+    "mapaIframe": 1,
+    "menu": "true -> false",
+    "sinGsap": "has-motion:false · titular:1 · sello hero:0.92 · viajes:6 · contador:6 · estado:Cerrado ahora · abrimos hoy a ",
+    "reduce": "has-motion:false · quinto viaje visible:true · opacidad sello:0.92 · estado:Cerrado ahora · abrimos hoy a "
+  },
+  "longtask": "103"
+}
