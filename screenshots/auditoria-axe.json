@@ -1,0 +1,25 @@
+{
+  "repo": "plantilla-viajes-web",
+  "pasadas": [
+    {
+      "nombre": "portada · escritorio",
+      "violaciones": []
+    },
+    {
+      "nombre": "portada · móvil",
+      "violaciones": []
+    },
+    {
+      "nombre": "aviso legal · escritorio",
+      "violaciones": []
+    },
+    {
+      "nombre": "404 · escritorio",
+      "violaciones": []
+    },
+    {
+      "nombre": "404 · móvil",
+      "violaciones": []
+    }
+  ]
+}

@@ -12,10 +12,12 @@
   --crema: #fbf8f1;
   --tinta: #241f1c;
   --tinta-media: #5b524a;
-  --tinta-suave: #8b8177;
+  --tinta-suave: #6c655d;  /* 4,54 sobre --panel, el peor fondo. Antes #8b8177: 3,0-3,6 */
   --verde: #1f4e4a;
   --verde-claro: #2f6b64;
-  --mostaza: #c89a2b;
+  --mostaza: #c89a2b;      /* marca: sobre fondo oscuro y en filetes */
+  --mostaza-tinta: #80631c; /* sellos sobre papel: 4,51 YA CON el opacity .92 del sello */
+  --mostaza-clara: #d9a93a; /* la misma, para texto sobre --tinta */
   --rojo: #a63d2f;
 
   --display: "Spectral", Georgia, serif;
@@ -219,7 +221,7 @@ html.has-motion .sello.visible { opacity: .92; transform: rotate(var(--giro, -6d
 }
 .sello--hero { position: absolute; }
 .sello--1 { width: 42%; top: 12%; left: 8%; --giro: -9deg; }
-.sello--2 { width: 52%; top: 40%; right: 6%; --giro: 6deg; color: var(--mostaza); }
+.sello--2 { width: 52%; top: 40%; right: 6%; --giro: 6deg; color: var(--mostaza-tinta); }
 .sello--3 { width: 40%; bottom: 8%; left: 18%; --giro: -3deg; color: var(--rojo); }
 .hero__pie { margin-top: .9rem; font-size: .78rem; color: var(--tinta-suave); font-style: italic; }
 
@@ -252,7 +254,7 @@ html.has-motion .sello.visible { opacity: .92; transform: rotate(var(--giro, -6d
 }
 .viaje:hover { border-color: rgba(36, 31, 28, .4); box-shadow: 0 18px 34px -28px rgba(36, 31, 28, .5); }
 .viaje .sello { width: min(58%, 150px); justify-self: start; }
-.viaje:nth-child(2n) .sello { color: var(--mostaza); }
+.viaje:nth-child(2n) .sello { color: var(--mostaza-tinta); }
 .viaje:nth-child(3n) .sello { color: var(--rojo); }
 .viaje h3 { font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem); margin-bottom: .4rem; }
 .viaje__resumen { color: var(--tinta-media); font-size: .93rem; margin-bottom: .8rem; }
@@ -418,7 +420,7 @@ html.has-motion .sello.visible { opacity: .92; transform: rotate(var(--giro, -6d
     transition: width .3s var(--curva), height .3s var(--curva), background .3s var(--curva);
   }
   html.has-motion .cursor--grande .cursor__forma {
-    width: 76px; height: 76px; background: rgba(36, 31, 28, .3); border-color: var(--crema);
+    width: 76px; height: 76px; background: rgba(36, 31, 28, .72); border-color: var(--crema);
   }
   .cursor__texto {
     position: absolute; font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
